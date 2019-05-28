@@ -10,6 +10,7 @@ namespace WoterCantrol.BLL.Interfaces
     {
         void CreateProduct(ProductDTO productDTO);
         ProductDTO GetProduct(string name);
+        IEnumerable<ProductDTO> GetProducts();
         void UpdateProduct(ProductDTO productDTO);
         void Dispose();
     }

@@ -8,7 +8,7 @@ namespace WoterCantrol.BLL.Interfaces
 {
     public interface IOrderService
     {
-        void CreateOrder(OrderDTO orderDTO);
+        void CreateOrder(OrderDTO orderDTO, int productId, int count);
         void UpdateOrder(OrderDTO orderDTO);
         OrderDTO GetOrder(int id);
         IEnumerable<OrderDTO> GetOrdersByStatus(string status);

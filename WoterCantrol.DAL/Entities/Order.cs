@@ -19,7 +19,7 @@ namespace WoterCantrol.DAL.Entities
         public Sensor Sensor { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public int NewAddressId { get; set; }
-        public NewAddress NewAddress { get; set; }
+        public int NewOrderId { get; set; }
+        public NewOrder NewOrder { get; set; }
     }
 }

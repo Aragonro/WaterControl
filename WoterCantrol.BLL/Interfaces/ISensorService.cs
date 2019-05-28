@@ -8,7 +8,8 @@ namespace WoterCantrol.BLL.Interfaces
 {
     public interface ISensorService
     {
-        void CreateUser(SensorDTO sensorDTO);
+        void CreateSensor(SensorDTO sensorDTO, string email);
+        void UpdateSensor(SensorDTO sensorDTO);
         SensorDTO GetSensor(int id);
         IEnumerable<SensorDTO> GetSensorsByEmail(string email);
         void Dispose();

@@ -15,7 +15,6 @@ namespace WoterCantrol.DAL.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<NewOrder> NewOrders { get; set; }
-        public DbSet<NewAddress> NewAddresses { get; set; }
         public DbSet<Monitoring> Monitorings { get; set; }
         public DbSet<DeliverySetting> DeliverySettings { get; set; }
         public DbSet<Statistic> Statistics { get; set; }

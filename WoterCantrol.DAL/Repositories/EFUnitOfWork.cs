@@ -17,7 +17,6 @@ namespace WoterCantrol.DAL.Repositories
         private ProductRepository productRepository;
         private OrderRepository orderRepository;
         private NewOrderRepository newOrderRepository;
-        private NewAddressRepository newAddressRepository;
         private MonitoringRepository monitoringRepository;
         private DeliverySettingRepository deliverySettingRepository;
         private StatisticRepository statisticRepository;
@@ -75,15 +74,6 @@ namespace WoterCantrol.DAL.Repositories
             }
         }
 
-        public IRepository<NewAddress> NewAddresses
-        {
-            get
-            {
-                if (newAddressRepository == null)
-                    newAddressRepository = new NewAddressRepository(db);
-                return newAddressRepository;
-            }
-        }
         public IRepository<Monitoring> Monitorings
         {
             get

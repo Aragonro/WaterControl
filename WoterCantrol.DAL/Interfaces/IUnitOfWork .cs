@@ -14,7 +14,6 @@ namespace WoterCantrol.DAL.Interfaces
         IRepository<Product> Products { get; }
         IRepository<Order> Orders { get; }
         IRepository<NewOrder> NewOrders { get; }
-        IRepository<NewAddress> NewAddresses { get; }
         IRepository<Monitoring> Monitorings { get; }
         IRepository<DeliverySetting> DeliverySettings { get; }
         IRepository<Statistic> Statistics { get; }

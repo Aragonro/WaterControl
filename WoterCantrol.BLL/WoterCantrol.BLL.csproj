@@ -50,7 +50,6 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\DeliverySettingDTO.cs" />
     <Compile Include="DTO\MonitoringDTO.cs" />
-    <Compile Include="DTO\NewAddressDTO.cs" />
     <Compile Include="DTO\NewOrderDTO.cs" />
     <Compile Include="DTO\OrderDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="Infrastructure\ValidationException.cs" />
     <Compile Include="Interfaces\IDeliverySettingService.cs" />
     <Compile Include="Interfaces\IMonitoringService.cs" />
-    <Compile Include="Interfaces\INewAddressService.cs" />
     <Compile Include="Interfaces\INewOrderService.cs" />
     <Compile Include="Interfaces\IOrderService.cs" />
     <Compile Include="Interfaces\IProductService.cs" />
@@ -69,6 +67,9 @@
     <Compile Include="Interfaces\IStatisticService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\SensorService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

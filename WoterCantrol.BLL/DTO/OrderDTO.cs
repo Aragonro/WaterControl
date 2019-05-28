@@ -17,6 +17,6 @@ namespace WoterCantrol.BLL.DTO
         public int IdAdmin { get; set; }
         public int SensorId { get; set; }
         public int UserId { get; set; }
-        public int NewAddressId { get; set; }
+        public int NewOrderId { get; set; }
     }
 }

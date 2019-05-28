@@ -52,7 +52,6 @@
     <Compile Include="EF\WaterControlContext.cs" />
     <Compile Include="Entities\DeliverySetting.cs" />
     <Compile Include="Entities\Monitoring.cs" />
-    <Compile Include="Entities\NewAddress.cs" />
     <Compile Include="Entities\NewOrder.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Product.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="Repositories\DeliverySettingRepository.cs" />
     <Compile Include="Repositories\EFUnitOfWork.cs" />
     <Compile Include="Repositories\MonitoringRepository.cs" />
-    <Compile Include="Repositories\NewAddressRepository.cs" />
     <Compile Include="Repositories\NewOrderRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />

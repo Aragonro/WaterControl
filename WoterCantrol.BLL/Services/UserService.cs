@@ -9,7 +9,7 @@ using AutoMapper;
 
 namespace WoterCantrol.BLL.Services
 {
-    class UserService : IUserService
+    public class UserService : IUserService
     {
         IUnitOfWork Database { get; set; }
 
