@@ -4,3 +4,6 @@
 
 /packages
 /.vs
+/WoterCantrol/bin
+/WoterCantrol.BLL/bin/Debug
+/WoterCantrol.DAL/bin/Debug

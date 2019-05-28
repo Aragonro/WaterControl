@@ -1,0 +1,17 @@
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\WoterCantrol.BLL.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\WoterCantrol.BLL.pdb
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\AutoMapper.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\Ninject.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\WoterCantrol.DAL.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\EntityFramework.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\WoterCantrol.DAL.pdb
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\WoterCantrol.DAL.dll.config
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\AutoMapper.pdb
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\AutoMapper.xml
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\Ninject.xml
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\bin\Debug\EntityFramework.xml
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\obj\Debug\WoterCantrol.BLL.csprojAssemblyReference.cache
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\obj\Debug\WoterCantrol.BLL.csproj.CoreCompileInputs.cache
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\obj\Debug\WoterCantrol.BLL.csproj.CopyComplete
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\obj\Debug\WoterCantrol.BLL.dll
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.BLL\obj\Debug\WoterCantrol.BLL.pdb
