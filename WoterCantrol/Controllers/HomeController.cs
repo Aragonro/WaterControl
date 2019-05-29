@@ -77,6 +77,42 @@ namespace WoterCantrol.Controllers
             return Json("You are registered");
         }
 
+        public ActionResult Monitorings()
+        {
+
+            var email = HttpContext.Request.Cookies["email"];
+            var password = HttpContext.Request.Cookies["password"];
+            UserViewModel model = new UserViewModel();
+            model.Role = "Anonym";
+            if (email != null && password != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+        public JsonResult GetMonitorings()
+        {
+
+            var email = HttpContext.Request.Cookies["email"];
+            var password = HttpContext.Request.Cookies["password"];
+            UserViewModel model = new UserViewModel();
+            model.Role = "Anonym";
+            if (email != null && password != null)
+            {
+                List<MonitoringViewModel> result = new List<MonitoringViewModel>();
+                var temp = new MonitoringViewModel() { Id = 1, AutoDelivery = true, CountProduct = 1, DeliveryAddress = "Av. Nauki 14", IsProduct = true, IsWorking = true, ProductName = "5 gal", ObserverEmail = "user@gmail.com" };
+                result.Add(temp);
+                var temp1 = new MonitoringViewModel() { Id = 2, AutoDelivery = false, CountProduct = 5, DeliveryAddress = "Av. Nauki 35", IsWorking = false, ProductName = "5 gal", ObserverEmail = "friend@gmail.com" };
+                result.Add(temp1);
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            return Json("Server Error");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

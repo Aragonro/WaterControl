@@ -10,7 +10,8 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 @if (Model.Role == "User")
                 {
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("My Monitorings", "Monitorings", "Home")</li>
+                    <li>@Html.ActionLink("My Sensors", "Sensors", "Home")</li>
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -18,6 +19,10 @@
                 {
                     <li>@Html.ActionLink("Sign In", "SignIn", "Home")</li>
                     <li>@Html.ActionLink("Sign Up", "SignUp", "Home")</li>
+                }
+                @if (Model.Role == "User")
+                {
+                    <li ><a onclick="deleteAllCookie();document.location.href = '/'">Log out</a></li>
                 }
             </ul>
         </div>

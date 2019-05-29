@@ -1,0 +1,25 @@
+﻿@section header{
+    @{Html.RenderPartial("Partial/header", model: new WoterCantrol.Models.UserViewModel() { Role = "User" });}
+}
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="~/Scripts/Monitorings.js"></script>
+}
+
+<div style="width:25%;margin: 0 auto;margin-top: 100px;text-align: center;background-color:grey;" class="form-horizontal">
+    <div id="legend">
+        <legend>My Monitorings</legend>
+    </div>
+    <div id="my-form">
+        <ul v-for="output in outputs" class="list-group list-group-flush" style="background-color:grey;">
+            <li v-for="(value,key) in output" class="list-group-item" style="background-color:grey;text-align:left;">
+                {{outputsName[key]}} : {{value}}
+            </li>
+            <br>
+        </ul>
+        <div style="hight:100px; background-color:blue">
+
+        </div>
+    </div>
+    <br />
+</div>
