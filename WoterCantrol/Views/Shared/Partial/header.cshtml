@@ -1,0 +1,25 @@
+﻿@model WoterCantrol.Models.UserViewModel
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid" id="navdiv">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/" style="font-family: 'Times New Roman', Times, serif; font-style: italic; ">WaterControl</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                @if (Model.Role == "User")
+                {
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                }
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (Model.Role == "Anonym")
+                {
+                    <li>@Html.ActionLink("Sign In", "SignIn", "Home")</li>
+                    <li>@Html.ActionLink("Sign Up", "SignUp", "Home")</li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

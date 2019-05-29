@@ -5,8 +5,8 @@ E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\bin\Debug\EntityFramework.dll
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\bin\Debug\EntityFramework.SqlServer.dll
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\bin\Debug\EntityFramework.xml
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\bin\Debug\EntityFramework.SqlServer.xml
-E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.csprojAssemblyReference.cache
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.csproj.CoreCompileInputs.cache
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.csproj.CopyComplete
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.dll
 E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.pdb
+E:\Nag1b\GitTest\WaterControl\WoterCantrol.DAL\obj\Debug\WoterCantrol.DAL.csprojAssemblyReference.cache
