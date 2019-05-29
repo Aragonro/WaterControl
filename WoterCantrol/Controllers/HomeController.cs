@@ -83,7 +83,6 @@ namespace WoterCantrol.Controllers
             var email = HttpContext.Request.Cookies["email"];
             var password = HttpContext.Request.Cookies["password"];
             UserViewModel model = new UserViewModel();
-            model.Role = "Anonym";
             if (email != null && password != null)
             {
                 return View();
@@ -100,7 +99,6 @@ namespace WoterCantrol.Controllers
             var email = HttpContext.Request.Cookies["email"];
             var password = HttpContext.Request.Cookies["password"];
             UserViewModel model = new UserViewModel();
-            model.Role = "Anonym";
             if (email != null && password != null)
             {
                 List<MonitoringViewModel> result = new List<MonitoringViewModel>();
@@ -112,6 +110,7 @@ namespace WoterCantrol.Controllers
             }
             return Json("Server Error");
         }
+
 
         public ActionResult About()
         {
