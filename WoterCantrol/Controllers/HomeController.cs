@@ -65,6 +65,18 @@ namespace WoterCantrol.Controllers
             return Json(user);
         }
 
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult SignUp(UserViewModel user)
+        {
+
+            return Json("You are registered");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
