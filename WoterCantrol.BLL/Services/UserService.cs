@@ -6,6 +6,7 @@ using WoterCantrol.BLL.Infrastructure;
 using WoterCantrol.BLL.Interfaces;
 using System.Collections.Generic;
 using AutoMapper;
+using System.Linq;
 
 namespace WoterCantrol.BLL.Services
 {
@@ -19,8 +20,8 @@ namespace WoterCantrol.BLL.Services
         }
         public void CreateUser(UserDTO userDTO)
         {
-            var emptyUser = Database.Users.Find(i => i.Email == userDTO.Email).GetEnumerator().Current;
-            if(emptyUser != null)
+            var emptyUser = Database.Users.Find(i => i.Email == userDTO.Email).FirstOrDefault();
+            if (emptyUser != null)
             {
                 throw new ValidationException("User is exist with this email", "");
             }
@@ -35,7 +36,7 @@ namespace WoterCantrol.BLL.Services
 
         public UserDTO GetUser(string email)
         {
-            var user = Database.Users.Find(u => u.Email == email).GetEnumerator().Current;
+            var user = Database.Users.Find(u => u.Email == email).FirstOrDefault();
             if (user == null)
                 throw new ValidationException("User isn`t exist with this email or password", "");
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<User, UserDTO>()).CreateMapper();
@@ -44,7 +45,6 @@ namespace WoterCantrol.BLL.Services
 
         public IEnumerable<UserDTO> GetСouriers()
         {
-            // применяем автомаппер для проекции одной коллекции на другую
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<User, UserDTO>()).CreateMapper();
             return mapper.Map<IEnumerable<User>, List<UserDTO>>(Database.Users.Find(u => u.Role == "Courier"));
         }

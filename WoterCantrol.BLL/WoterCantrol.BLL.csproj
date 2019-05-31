@@ -48,10 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Constant\RolesEnum.cs" />
+    <Compile Include="Constant\StatusesEnum.cs" />
     <Compile Include="DTO\DeliverySettingDTO.cs" />
     <Compile Include="DTO\MonitoringDTO.cs" />
     <Compile Include="DTO\NewOrderDTO.cs" />
+    <Compile Include="DTO\OrderCourierDTO.cs" />
     <Compile Include="DTO\OrderDTO.cs" />
+    <Compile Include="DTO\OrderObserverDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DTO\SensorDTO.cs" />
     <Compile Include="DTO\StatisticDTO.cs" />

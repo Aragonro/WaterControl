@@ -6,6 +6,7 @@ using WoterCantrol.BLL.Infrastructure;
 using WoterCantrol.BLL.Interfaces;
 using System.Collections.Generic;
 using AutoMapper;
+using System.Linq;
 
 namespace WoterCantrol.BLL.Services
 {
@@ -20,7 +21,7 @@ namespace WoterCantrol.BLL.Services
 
         public void CreateProduct(ProductDTO productDTO)
         {
-            var emptyProduct = Database.Products.Find(i => i.Name == productDTO.Name).GetEnumerator().Current;
+            var emptyProduct = Database.Products.Find(i => i.Name == productDTO.Name).FirstOrDefault();
             if (emptyProduct != null)
             {
                 throw new ValidationException("Product is exist with this name", "");
@@ -33,7 +34,7 @@ namespace WoterCantrol.BLL.Services
 
         public ProductDTO GetProduct(string name)
         {
-            var product = Database.Products.Find(i => i.Name == name).GetEnumerator().Current;
+            var product = Database.Products.Find(i => i.Name == name).FirstOrDefault();
             if (product == null)
                 throw new ValidationException("Product isn`t exist with this name", "");
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Product, ProductDTO>()).CreateMapper();

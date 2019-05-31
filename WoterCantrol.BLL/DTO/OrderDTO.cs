@@ -13,7 +13,7 @@ namespace WoterCantrol.BLL.DTO
         public string DeliveryAddress { get; set; }
         public decimal PriceSum { get; set; }
         public string Status { get; set; }
-        public bool UseNewAddress { get; set; }
+        public bool UseNewOrder { get; set; }
         public int IdAdmin { get; set; }
         public int SensorId { get; set; }
         public int UserId { get; set; }

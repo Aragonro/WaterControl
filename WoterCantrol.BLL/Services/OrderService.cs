@@ -7,6 +7,7 @@ using WoterCantrol.BLL.Interfaces;
 using System.Collections.Generic;
 using AutoMapper;
 using System.Linq;
+using WoterCantrol.BLL.Constant;
 
 namespace WoterCantrol.BLL.Services
 {
@@ -30,7 +31,7 @@ namespace WoterCantrol.BLL.Services
             Database.Products.Update(product);
             Database.Save();
             orderDTO.Status = "open";
-            orderDTO.UseNewAddress = true;
+            orderDTO.UseNewOrder = true;
             orderDTO.PriceSum = product.Price * count;
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<OrderDTO, Order>()).CreateMapper();
             var order = mapper.Map< OrderDTO, Order> (orderDTO);
@@ -44,24 +45,45 @@ namespace WoterCantrol.BLL.Services
 
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
         public OrderDTO GetOrder(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<OrderDTO> GetOrdersByCourier(int id)
+        public IEnumerable<OrderCourierDTO> GetOrdersByCourier(int id)
         {
-            throw new NotImplementedException();
+            var orders = Database.Orders.Find(i => i.UserId == id && (i.Status == StatusesEnum.Assigne || i.Status == StatusesEnum.InProgress));
+            var result = new List<OrderCourierDTO>();
+            foreach(var order in orders)
+            {
+                var mapper = new MapperConfiguration(cfg => cfg.CreateMap<IEnumerable<Order>, OrderCourierDTO>()).CreateMapper();
+                var orderCourierDTO = mapper.Map<Order, OrderCourierDTO>(order);
+                if (order.UseNewOrder)
+                {
+                    orderCourierDTO.Email = order.NewOrder.User.Email;
+                }
+                else
+                {
+                    orderCourierDTO.Email = order.Sensor.User.Email;
+                }
+                result.Add(orderCourierDTO);
+            }
+            return result;
         }
 
-        public IEnumerable<OrderDTO> GetOrdersByObserve(int id)
+        public IEnumerable<OrderObserverDTO> GetOrdersByObserve(int id)
         {
-            throw new NotImplementedException();
+
+            var orders = Database.Orders.Find(i => !(i.Sensor is null) && i.Sensor.Monitoring.UserId == id && (i.Status == StatusesEnum.Open || i.Status == StatusesEnum.Assigne || i.Status == StatusesEnum.InProgress));
+            var result = new List<OrderObserverDTO>();
+            foreach (var order in orders)
+            {
+                var mapper = new MapperConfiguration(cfg => cfg.CreateMap<IEnumerable<Order>, OrderObserverDTO>()).CreateMapper();
+                var orderObserverDTO = mapper.Map<Order, OrderObserverDTO>(order);
+                orderObserverDTO.Email = order.Sensor.User.Email;
+                result.Add(orderObserverDTO);
+            }
+            return result;
         }
 
         public IEnumerable<OrderDTO> GetOrdersByStatus(string status)
@@ -77,6 +99,18 @@ namespace WoterCantrol.BLL.Services
         public void UpdateOrder(OrderDTO orderDTO)
         {
             throw new NotImplementedException();
+        }
+
+        public void UpdateOrderStatus(OrderDTO orderDTO)
+        {
+            var order = Database.Orders.Get(orderDTO.Id);
+            order.Status = orderDTO.Status;
+            order.UserId = orderDTO.UserId;
+        }
+
+        public void Dispose()
+        {
+            Database.Dispose();
         }
     }
 }

@@ -10,11 +10,12 @@ namespace WoterCantrol.BLL.Interfaces
     {
         void CreateOrder(OrderDTO orderDTO, int productId, int count);
         void UpdateOrder(OrderDTO orderDTO);
+        void UpdateOrderStatus(OrderDTO orderDTO);
         OrderDTO GetOrder(int id);
         IEnumerable<OrderDTO> GetOrdersByStatus(string status);
-        IEnumerable<OrderDTO> GetOrdersByCourier(int id);
+        IEnumerable<OrderCourierDTO> GetOrdersByCourier(int id);
         IEnumerable<OrderDTO> GetOrdersByUser(int id);
-        IEnumerable<OrderDTO> GetOrdersByObserve(int id);
+        IEnumerable<OrderObserverDTO> GetOrdersByObserve(int id);
         void Dispose();
     }
 }

@@ -6,6 +6,7 @@ using WoterCantrol.BLL.Infrastructure;
 using WoterCantrol.BLL.Interfaces;
 using System.Collections.Generic;
 using AutoMapper;
+using System.Linq;
 
 namespace WoterCantrol.BLL.Services
 {
@@ -19,7 +20,7 @@ namespace WoterCantrol.BLL.Services
         }
         public void CreateSensor(SensorDTO sensorDTO, string email)
         {
-            var user = Database.Users.Find(i => i.Email == email).GetEnumerator().Current;
+            var user = Database.Users.Find(i => i.Email == email).FirstOrDefault();
             sensorDTO.Id = user.Id;
             sensorDTO.IsProduct = false;
             sensorDTO.IsWorking = false;

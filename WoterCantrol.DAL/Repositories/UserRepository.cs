@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WoterCantrol.DAL.EF;
 using WoterCantrol.DAL.Entities;
 using WoterCantrol.DAL.Interfaces;
+using System.Security.Cryptography;
 
 namespace WoterCantrol.DAL.Repositories
 {
